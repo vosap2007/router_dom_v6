@@ -9,12 +9,13 @@ import {
 import Contact from './Contact';
 import Data from './Data';
 import Home from './Home';
+import Error from './Error';
 import './index.css';
 
 function App(props) {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root />}>
+      <Route path="/" element={<Root />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="/data" element={<Data />} />
         <Route path="/contact" element={<Contact />} />
